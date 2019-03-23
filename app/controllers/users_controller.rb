@@ -1,5 +1,13 @@
 class UsersController < ApplicationController
 
+  def new
+    flash[:sign_in] = "ログインしました。"
+  end
+
+  def create
+    flash[:user_create] = "アカウントが登録されました。"
+  end
+
   def edit
   end
 
@@ -9,6 +17,10 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    flash[:sign_out] = "ログアウトしました。"
   end
 
   private
