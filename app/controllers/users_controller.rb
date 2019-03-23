@@ -1,0 +1,31 @@
+class UsersController < ApplicationController
+
+  def new
+    flash[:sign_in] = "ログインしました。"
+  end
+
+  def create
+    flash[:user_create] = "アカウントが登録されました。"
+  end
+
+  def edit
+  end
+
+  def update
+    if current_user.update(user_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    flash[:sign_out] = "ログアウトしました。"
+  end
+
+  private
+
+  def params_permit
+    params.require(:user).permit(:name, :email)
+  end
+end
