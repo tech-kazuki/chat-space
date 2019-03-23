@@ -2709,3 +2709,80 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 90ms (Views: 84.2ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-03-23 19:58:06 +0900
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 1[0m
+  Rendered devise/shared/_side_bar.html.haml (36.4ms)
+  Rendered messages/index.html.haml within layouts/application (51.1ms)
+  Rendered layouts/_flash.html.haml (1.7ms)
+Completed 200 OK in 437ms (Views: 407.3ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-23 19:59:38 +0900
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 1[0m
+  Rendered devise/shared/_side_bar.html.haml (7.2ms)
+  Rendered messages/index.html.haml within layouts/application (15.7ms)
+  Rendered layouts/_flash.html.haml (1.4ms)
+Completed 200 OK in 45ms (Views: 41.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-23 20:00:19 +0900
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 1[0m
+  Rendered devise/shared/_side_bar.html.haml (6.0ms)
+  Rendered messages/index.html.haml within layouts/application (13.8ms)
+  Rendered layouts/_flash.html.haml (3.3ms)
+Completed 200 OK in 326ms (Views: 321.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-23 20:00:28 +0900
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 1[0m
+  Rendered devise/shared/_side_bar.html.haml (6.4ms)
+  Rendered messages/index.html.haml within layouts/application (15.1ms)
+  Rendered layouts/_flash.html.haml (1.4ms)
+Completed 200 OK in 46ms (Views: 40.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-23 20:02:37 +0900
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 1[0m
+  Rendered devise/shared/_side_bar.html.haml (9.4ms)
+  Rendered messages/index.html.haml within layouts/application (18.3ms)
+  Rendered layouts/_flash.html.haml (1.5ms)
+Completed 200 OK in 337ms (Views: 332.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-23 20:02:54 +0900
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 1[0m
+  Rendered devise/shared/_side_bar.html.haml (10.4ms)
+  Rendered messages/index.html.haml within layouts/application (19.8ms)
+  Rendered layouts/_flash.html.haml (1.3ms)
+Completed 200 OK in 340ms (Views: 334.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-23 20:04:14 +0900
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 1[0m
+  Rendered devise/shared/_side_bar.html.haml (6.2ms)
+  Rendered messages/index.html.haml within layouts/application (13.7ms)
+  Rendered layouts/_flash.html.haml (2.0ms)
+Completed 200 OK in 318ms (Views: 313.9ms | ActiveRecord: 0.7ms)
+
+

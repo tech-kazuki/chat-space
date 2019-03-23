@@ -2,7 +2,6 @@ class UsersController < ApplicationController
 
   def new
     @users = User.all
-    binding.pry
     flash[:sign_in] = "ログインしました。"
   end
 

@@ -13,7 +13,7 @@
   .group
     - current_user.groups.each do |group|
       = link_to  do
-        %p.group__group-name
+        .group__group-name
           = group.name
-        %p.group__latest-message
+        .group__latest-message
           メッセージはまだありません
