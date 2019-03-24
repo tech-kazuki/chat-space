@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def new
+    @users = User.all
     flash[:sign_in] = "ログインしました。"
   end
 

@@ -40,13 +40,19 @@ body {
       padding: 20px 20px 0;
       overflow: scroll;
       .group {
-        margin-bottom: 40px;
-        &__group-name {
-          font-size: 15px;
-          margin-bottom: 5px;
-        }
-        &__latest-message {
-          font-size: 11px;
+        a {
+          color: white;
+          text-decoration: none;
+
+          &__group-name {
+            font-size: 15px;
+            margin: 20px 0 5px 0;
+          }
+
+          &__latest-message {
+            font-size: 11px;
+            margin-bottom: 40px;
+          }
         }
       }
     }
