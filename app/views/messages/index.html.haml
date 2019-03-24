@@ -21,12 +21,10 @@
         %p.message__text
           test
     .form
-      %form.new_message
-        %input(type="hidden")
-        %input(type="hidden")
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .input-box
-          %input(type="text" class="input-box__text")
-          %label.input-box__image
-            =fa_icon "image"
-            %input(type="file" class="input-box__image__file")
-        %input(type="submit" value="Submit" class="submit-btn")
+          = f.label :image, class: 'input-box__image' do
+            = fa_icon 'image'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'submit-btn'

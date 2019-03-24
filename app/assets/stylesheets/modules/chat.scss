@@ -59,43 +59,41 @@
     }
   }
   .form {
-    padding: 20px 40px;
+    padding: 20px 50px 20px 40px;
     background-color: #ddd;
+    height: 90px;
 
-    .new_message {
-      display: flex;
-      .input-box {
-        position: relative;
-        width: 100%;
+    &__message {
+      float: left;
+      border: none;
+      height: 50px;
+      width: calc(100% - 150px);
+    }
+    .input-box {
+      float: left;
+      padding-right: 10px;
+      height: 50px;
+      background-color: white;
 
-        &__text {
-          height: 50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color: $main-text-color;
-          border-style: none;
-        }
-        &__image {
-          font-size: 1.3rem;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-
-          &__file {
-            display: none;
-          }
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+        .hidden {
+          display: none;
         }
       }
-      .submit-btn {
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: $link-color;
-        color: white;
-        cursor: pointer;
-      }
+    }
+
+    .submit-btn {
+      font-size: 16px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: $link-color;
+      color: white;
+      cursor: pointer;
+      border: none;
+      float: right;
     }
   }
 }
