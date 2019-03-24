@@ -20,13 +20,14 @@
 
           &__edit-user {
             margin-left: 0.3rem;
-            a{
+            .fa {
               color: white;
             }
           }
           &__new-group {
             margin-left: 0.3rem;
-            a {
+            color: white;
+            .fa {
               color: white;
             }
           }
@@ -36,22 +37,19 @@
     .groups {
       height: calc(100vh - 100px);
       background-color: #2f3e51;
-      padding: 20px 20px 0;
-      overflow: scroll;
+      padding: 0 20px;
       .group {
-        a {
+        padding: 20px 0 40px;
+        box-sizing: border-box;
+        &__name {
+          font-size: 15px;
           color: white;
-          text-decoration: none;
+        }
 
-          &__group-name {
-            font-size: 15px;
-            margin: 20px 0 5px 0;
-          }
-
-          &__latest-message {
-            font-size: 11px;
-            margin-bottom: 40px;
-          }
+        &__message {
+          font-size: 11px;
+          margin-top: 5px;
+          color: white;
         }
       }
     }
