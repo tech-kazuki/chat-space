@@ -9,7 +9,7 @@
         %ul.main-header__left-box__member-list
           Member：
           %li.main-header__left-box__member-list__member test
-      =link_to do
+      =link_to style: "text-decoration: none;" do
         .main-header__edit-btn Edit
     .messages
       .message
@@ -29,4 +29,4 @@
           %label.input-box__image
             =fa_icon "image"
             %input(type="file" class="input-box__image__file")
-        %input(type="submit" class="submit-btn")
+        %input(type="submit" value="Submit" class="submit-btn")
