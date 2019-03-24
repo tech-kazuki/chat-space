@@ -1,46 +1,58 @@
-.side-bar {
-  box-sizing: border-box;
-  color: $white;
-  width: 300px;
-  .header {
-    background-color: $side_blue_dark;
-    height: 100px;
-    line-height: 100px;
-    padding: 0 20px;
-    &__name {
-      display: inline-block;
-      font-size: $side_header_font;
-      font-weight: bold;
-    }
-    &__lists {
-      display: inline-block;
-      float: right;
-      .list {
-        display: inline-block;
-      }
-      .icon {
-        color: $white;
-        font-size: $side_header_font;
-      }
-    }
-  }
+.chat-side {
+    width: 300px;
+    color: white;
+    float: left;
 
-  .groups {
-    background-color: $side_blue_light;
-    height: calc(100vh - 100px);
-    padding: 0 20px;
-    .group {
-      box-sizing: border-box;
-      padding: 20px 0 40px;
-      &__name {
-        color: $white;
-        font-size: $side_group_name;
+    .side-header {
+      background-color: #253141;
+      height: 100px;
+      display: flex;
+      padding: 0 20px;
+      align-items: center;
+
+      &__box {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-weight: bold;
+        &__menu {
+          display: flex;
+
+          &__edit-user {
+            margin-left: 0.3rem;
+            a{
+              color: white;
+            }
+          }
+          &__new-group {
+            margin-left: 0.3rem;
+            a {
+              color: white;
+            }
+          }
+        }
       }
-      &__message {
-        color: $white;
-        font-size: $side_group_message;
-        margin-top: 5px;
+    }
+    .groups {
+      height: calc(100vh - 100px);
+      background-color: #2f3e51;
+      padding: 20px 20px 0;
+      overflow: scroll;
+      .group {
+        a {
+          color: white;
+          text-decoration: none;
+
+          &__group-name {
+            font-size: 15px;
+            margin: 20px 0 5px 0;
+          }
+
+          &__latest-message {
+            font-size: 11px;
+            margin-bottom: 40px;
+          }
+        }
       }
     }
   }
-}
