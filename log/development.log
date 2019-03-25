@@ -4003,3 +4003,38 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 46ms (Views: 40.3ms | ActiveRecord: 1.5ms)
 
 
+Started POST "/groups/16/messages" for 127.0.0.1 at 2019-03-25 11:58:24 +0900
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XuFJFfgU4/YLpOBG9F/1oUxplzEk0FyV9MZ3TF1DJ0ebwEOMwptZEYC4OmauoiHmTQJQ4sgaU4sYlACQ4eriIg==", "message"=>{"content"=>""}, "commit"=>"Send", "group_id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 16 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 2[0m
+  Rendered devise/shared/_side_bar.html.haml (4.9ms)
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 16[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  Rendered collection of messages/_message.html.haml [5 times] (4.1ms)
+  Rendered messages/index.html.haml within layouts/application (18.9ms)
+  Rendered layouts/_flash.html.haml (1.6ms)
+Completed 200 OK in 473ms (Views: 41.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/groups/16/messages" for 127.0.0.1 at 2019-03-25 11:59:04 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 16 LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 2[0m
+  Rendered devise/shared/_side_bar.html.haml (5.4ms)
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 16[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  Rendered collection of messages/_message.html.haml [5 times] (2.9ms)
+  Rendered messages/index.html.haml within layouts/application (18.0ms)
+  Rendered layouts/_flash.html.haml (1.4ms)
+Completed 200 OK in 47ms (Views: 40.8ms | ActiveRecord: 1.5ms)
+
+
