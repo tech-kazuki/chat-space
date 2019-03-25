@@ -19,6 +19,9 @@
         display: flex;
         font-size: 12px;
         color: #999999;
+        &__member {
+          margin-left: 0.3rem;
+        }
       }
     }
     &__edit-btn {
@@ -59,41 +62,41 @@
     }
   }
   .form {
-    padding: 20px 50px 20px 40px;
+    padding: 20px 40px;
     background-color: #ddd;
     height: 90px;
-
-    &__message {
-      float: left;
-      border: none;
-      height: 50px;
-      width: calc(100% - 150px);
-    }
-    .input-box {
-      float: left;
-      padding-right: 10px;
-      height: 50px;
-      background-color: white;
-
-      &__image {
-        font-size: 20px;
-        line-height: 50px;
+    .new-message {
+      display: flex;
+      width: 100%;
+      .input-box {
+        padding-right: 10px;
+        height: 50px;
+        background-color: white;
+        &__message {
+        border: none;
+        height: 50px;
+        width: calc(100% - 150px);
+        }
+        &__image {
+          font-size: 20px;
+          line-height: 50px;
+        }
         .hidden {
           display: none;
         }
       }
-    }
 
-    .submit-btn {
-      font-size: 16px;
-      height: 50px;
-      padding: 0 30px;
-      margin-left: 15px;
-      background-color: $link-color;
-      color: white;
-      cursor: pointer;
-      border: none;
-      float: right;
+      .submit-btn {
+        width: 100px;
+        font-size: 16px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: $link-color;
+        color: white;
+        cursor: pointer;
+        border: none;
+      }
     }
   }
 }

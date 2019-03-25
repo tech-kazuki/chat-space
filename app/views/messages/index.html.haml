@@ -5,17 +5,20 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group
+          = @group.name
         %ul.main-header__left-box__member-list
-          Member：
-          %li.main-header__left-box__member-list__member member
+          %li Member：
+          - @group.users.each do |user|
+            %li.main-header__left-box__member-list__member
+              = user.name
       =link_to do
         .main-header__edit-btn Edit
     .messages
       = render @messages
     .form
       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .input-box
+          = f.text_field :content, class: 'input-box__message', placeholder: 'type a message'
           = f.label :image, class: 'input-box__image' do
             = fa_icon 'image'
             = f.file_field :image, class: 'hidden'
