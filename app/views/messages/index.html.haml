@@ -5,21 +5,13 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group
-          test
         %ul.main-header__left-box__member-list
           Member：
-          %li.main-header__left-box__member-list__member test
-      =link_to style: "text-decoration: none;" do
+          %li.main-header__left-box__member-list__member member
+      =link_to do
         .main-header__edit-btn Edit
     .messages
-      .message
-        .message__upper-info
-          %p.message__upper-info__talker
-            test
-          %p.message__upper-info__date
-            2019/03/21
-        %p.message__text
-          test
+      = render @messages
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
