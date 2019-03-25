@@ -3721,3 +3721,285 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 84ms (Views: 58.7ms | ActiveRecord: 4.3ms)
 
 
+Started GET "/groups/17/messages" for 127.0.0.1 at 2019-03-25 10:51:46 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (7.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"17"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 17 LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (6.2ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 2[0m
+  Rendered devise/shared/_side_bar.html.haml (33.5ms)
+  Rendered messages/_message.html.haml (9.9ms)
+  Rendered messages/index.html.haml within layouts/application (67.9ms)
+Completed 500 Internal Server Error in 163ms (ActiveRecord: 32.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: .message
+    2:   .message__upper-info
+    3:     .message__upper-info__talker
+    4:       = message.user.name
+    5:     .message__upper-info__date
+    6:       = message.created_at.strftime("%Y/%m/%d %H:%M")
+    7:   .message__lower
+  
+app/views/messages/_message.html.haml:4:in `_app_views_messages__message_html_haml___1851107800622532185_70328484956860'
+app/views/messages/index.html.haml:14:in `_app_views_messages_index_html_haml___2532597301973151153_70328486308680'
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (109.8ms)
+Started GET "/groups/17/messages" for 127.0.0.1 at 2019-03-25 10:51:49 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"17"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 17 LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 2[0m
+  Rendered devise/shared/_side_bar.html.haml (5.6ms)
+  Rendered messages/_message.html.haml (4.4ms)
+  Rendered messages/index.html.haml within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: .message
+    2:   .message__upper-info
+    3:     .message__upper-info__talker
+    4:       = message.user.name
+    5:     .message__upper-info__date
+    6:       = message.created_at.strftime("%Y/%m/%d %H:%M")
+    7:   .message__lower
+  
+app/views/messages/_message.html.haml:4:in `_app_views_messages__message_html_haml___1851107800622532185_70328459261080'
+app/views/messages/index.html.haml:14:in `_app_views_messages_index_html_haml___2532597301973151153_70328450733980'
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (101.7ms)
+Started GET "/groups/17/messages" for 127.0.0.1 at 2019-03-25 10:55:54 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 17 LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 2[0m
+  Rendered devise/shared/_side_bar.html.haml (13.4ms)
+  Rendered messages/_message.html.haml (6.2ms)
+  Rendered messages/index.html.haml within layouts/application (28.7ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 10.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: .message
+    2:   .message__upper-info
+    3:     .message__upper-info__talker
+    4:       = message.user.name
+    5:     .message__upper-info__date
+    6:       = message.created_at.strftime("%Y/%m/%d %H:%M")
+    7:   .message__lower
+  
+app/views/messages/_message.html.haml:4:in `_app_views_messages__message_html_haml___1851107800622532185_70328512994640'
+app/views/messages/index.html.haml:14:in `_app_views_messages_index_html_haml___2532597301973151153_70328454979640'
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (107.5ms)
+Started GET "/groups/16/messages" for 127.0.0.1 at 2019-03-25 10:59:56 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"16"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 16 LIMIT 1[0m
+  [1m[36mMessage Load (1.9ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 16[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+Started GET "/groups/16/messages" for 127.0.0.1 at 2019-03-25 11:00:56 +0900
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 2[0m
+  Rendered devise/shared/_side_bar.html.haml (26.0ms)
+  Rendered messages/_message.html.haml (7.9ms)
+  Rendered messages/index.html.haml within layouts/application (55.2ms)
+Completed 500 Internal Server Error in 3143878ms (ActiveRecord: 15.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: .message
+    2:   .message__upper-info
+    3:     .message__upper-info__talker
+    4:       = message.user.name
+    5:     .message__upper-info__date
+    6:       = message.created_at.strftime("%Y/%m/%d %H:%M")
+    7:   .message__lower
+  
+app/views/messages/_message.html.haml:4:in `_app_views_messages__message_html_haml___1851107800622532185_70328487035920'
+app/views/messages/index.html.haml:14:in `_app_views_messages_index_html_haml___2532597301973151153_70328454268560'
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (100.4ms)
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"16"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 16 LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 2[0m
+  Rendered devise/shared/_side_bar.html.haml (11.9ms)
+  Rendered messages/_message.html.haml (3.8ms)
+  Rendered messages/index.html.haml within layouts/application (19.8ms)
+Completed 500 Internal Server Error in 7313ms (ActiveRecord: 14.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: .message
+    2:   .message__upper-info
+    3:     .message__upper-info__talker
+    4:       = message.user.name
+    5:     .message__upper-info__date
+    6:       = message.created_at.strftime("%Y/%m/%d %H:%M")
+    7:   .message__lower
+  
+app/views/messages/_message.html.haml:4:in `_app_views_messages__message_html_haml___1851107800622532185_70328487035920'
+app/views/messages/index.html.haml:14:in `_app_views_messages_index_html_haml___2532597301973151153_70328454268560'
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.6ms)
+Started GET "/groups/16/messages" for 127.0.0.1 at 2019-03-25 11:52:39 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 16 LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 2[0m
+  Rendered devise/shared/_side_bar.html.haml (5.7ms)
+  Rendered messages/_message.html.haml (4.9ms)
+  Rendered messages/index.html.haml within layouts/application (18.3ms)
+Completed 500 Internal Server Error in 11914ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: .message
+    2:   .message__upper-info
+    3:     .message__upper-info__talker
+    4:       = message.user.name
+    5:     .message__upper-info__date
+    6:       = message.created_at.strftime("%Y/%m/%d %H:%M")
+    7:   .message__lower
+  
+app/views/messages/_message.html.haml:4:in `_app_views_messages__message_html_haml___1851107800622532185_70328484458220'
+app/views/messages/index.html.haml:14:in `_app_views_messages_index_html_haml___2532597301973151153_70328485267620'
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (95.8ms)
+Started GET "/groups/16/messages" for 127.0.0.1 at 2019-03-25 11:54:03 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"16"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 16 LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 2[0m
+  Rendered devise/shared/_side_bar.html.haml (14.1ms)
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 16[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  Rendered collection of messages/_message.html.haml [4 times] (8.0ms)
+  Rendered messages/index.html.haml within layouts/application (32.2ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 8.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `conent' for #<Message:0x00007fed3d96d200>
+Did you mean?  content
+               content?
+               content=):
+     7:   .message__lower
+     8:     - if message.content.present?
+     9:       %p.message__lower__content
+    10:         = message.conent
+    11:     = image_tag message.image.url, class: 'message__lower__image' if message.image.present?
+  
+app/views/messages/_message.html.haml:10:in `_app_views_messages__message_html_haml___1851107800622532185_70328512628760'
+app/views/messages/index.html.haml:14:in `_app_views_messages_index_html_haml___2532597301973151153_70328513268380'
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/uekazuki0411/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (97.9ms)
+Started GET "/groups/16/messages" for 127.0.0.1 at 2019-03-25 11:54:26 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 16 LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 2[0m
+  Rendered devise/shared/_side_bar.html.haml (13.3ms)
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 16[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  Rendered collection of messages/_message.html.haml [4 times] (5.7ms)
+  Rendered messages/index.html.haml within layouts/application (93.8ms)
+  Rendered layouts/_flash.html.haml (1.7ms)
+Completed 200 OK in 438ms (Views: 430.4ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/groups/16/messages" for 127.0.0.1 at 2019-03-25 11:54:51 +0900
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7N03qtkZlGvWaLnSee7m42wcncVjk3bPrpiqLppKEyUp/D0z45YujF10Y/IjEzKkbXdaFo9ZedFCyt3yJuPWQA==", "message"=>{"content"=>"love"}, "commit"=>"Send", "group_id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 16 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO `messages` (`content`, `group_id`, `user_id`, `created_at`, `updated_at`) VALUES ('love', 16, 2, '2019-03-25 02:54:51', '2019-03-25 02:54:51')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/groups/16/messages
+Completed 302 Found in 14ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/groups/16/messages" for 127.0.0.1 at 2019-03-25 11:54:51 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"16"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 16 LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 2[0m
+  Rendered devise/shared/_side_bar.html.haml (6.1ms)
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 16[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  Rendered collection of messages/_message.html.haml [5 times] (3.3ms)
+  Rendered messages/index.html.haml within layouts/application (18.4ms)
+  Rendered layouts/_flash.html.haml (1.4ms)
+Completed 200 OK in 46ms (Views: 40.3ms | ActiveRecord: 1.5ms)
+
+
