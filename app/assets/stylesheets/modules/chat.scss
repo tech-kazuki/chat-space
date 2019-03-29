@@ -1,0 +1,101 @@
+.chat-main {
+  width: calc(100vw - 300px);
+  float: left;
+  .main-header {
+    height: 100px;
+    display: flex;
+    padding: 0 40px;
+    justify-content: space-between;
+    border-bottom: solid 1px #eee;
+
+    &__left-box {
+      margin-top: 35px;
+      &__current-group {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      &__member-list {
+        display: flex;
+        font-size: 12px;
+        color: #999999;
+        &__member {
+          margin-left: 0.3rem;
+        }
+      }
+    }
+    &__edit-btn {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px $link-color;
+      text-decoration: none;
+      color: $link-color;
+    }
+  }
+  .messages {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    padding: 46px 40px;
+    overflow: scroll;
+
+    .message {
+      padding-bottom: 40px;
+      &__upper-info {
+        display: flex;
+        margin-bottom: 10px;
+        &__talker {
+          color: $main-text-color;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date {
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      &__lower {
+        color: $main-text-color;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 40px;
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 150px);
+    }
+    &__mask {
+      background-color: white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: $link-color;
+      border: none;
+      color: white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
+  }
+}
