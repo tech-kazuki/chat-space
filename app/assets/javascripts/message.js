@@ -1,5 +1,9 @@
 $(document).on('turbolinks:load', function() {
   function buildHTML(message) {
+    var image = "";
+
+    image = (message.image) ? `<img class="lower-message__image" src="${ message.image }">`: "";
+
     var html = `<div class="message">
                   <div class="message__upper-info">
                     <div class="message__upper-info__talker">
@@ -13,6 +17,7 @@ $(document).on('turbolinks:load', function() {
                     <p class="message__lower__content">
                       ${message.content}
                     </p>
+                    ${image}
                   </div>
                 </div>`
     return html;
@@ -37,7 +42,6 @@ $(document).on('turbolinks:load', function() {
       var html = buildHTML(data);
       $('.messages').append(html)
       $('.form__message').val('')
-      console.log('.message');
       scroll()
     })
     .fail(function() {
