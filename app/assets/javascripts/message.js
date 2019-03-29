@@ -24,6 +24,7 @@ $(document).on('turbolinks:load', function() {
     var height = $('.messages')[0].scrollHeight;
     $('.messages').animate({scrollTop: height}, 'fast');
   }
+  $('#new_message').off('submit');
   $('#new_message').on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
