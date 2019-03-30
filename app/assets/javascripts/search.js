@@ -54,8 +54,6 @@ function addGroupUserHTML(data) {
 
   $(document).on('click', '.user-search-add', function() {
     userData = $(this).data();
-    debugger;
-    console.log(userData);
     addGroupUserHTML(userData);
     $('#chat-group-user-new').remove();
   });
