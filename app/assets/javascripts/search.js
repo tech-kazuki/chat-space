@@ -10,17 +10,10 @@ function appendUser(data) {
     search_list.append(html);
   }
 
-function appendErrMsgToHTML(msg) {
-  var html = `<div class="chat-group-user clearfix">
-                <p class="chat-group-user__name">${ msg }</p>
-              </div>`
-    search_list.append(html);
-  }
-
 var add_member = $('#chat-group-users');
 
 function addGroupUserHTML(data) {
-  var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
+  var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user'>
                             <input name='group[user_ids][]' type='hidden' value='${ data.userId }'>
                               <p class='chat-group-user__name'>${ data.userName }</p>
                               <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
@@ -44,7 +37,9 @@ function addGroupUserHTML(data) {
         });
       }
       else {
-        appendErrMsgToHTML('一致するユーザーはいません');
+        $('#user-search-result').append(`<div class="chat-group-user clearfix">
+                <p class="chat-group-user__name">一致するユーザーはいません</p>
+              </div>`);
       }
     })
     .fail(function() {
