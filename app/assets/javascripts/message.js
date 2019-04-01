@@ -52,24 +52,5 @@ $(document).on('turbolinks:load', function() {
     })
   });
 
-  $(function() {
-    setInterval(update, 100000000);
-  });
 
-  function update() {
-      var message_id = $('.message:last').data('id') || 0;
-    $.ajax({
-      url: location.href,
-      type: 'GET',
-      data: { message: { id: message_id } },
-      dataType: 'json'
-    })
-    .always(function(data){
-      $.each(data, function(data){
-        var html = buildHTML(data);
-        $('.messages').append(html);
-        scroll()
-      });
-    });
-  }
 });
