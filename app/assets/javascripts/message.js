@@ -53,7 +53,7 @@ $(document).on('turbolinks:load', function() {
   });
 
   $(function() {
-    setInterval(update, 100000000);
+    setInterval(update, 5000);
   });
 
   function update() {
@@ -65,7 +65,7 @@ $(document).on('turbolinks:load', function() {
       dataType: 'json'
     })
     .always(function(data){
-      $.each(data, function(data){
+      data.forEach(function(data){
         var html = buildHTML(data);
         $('.messages').append(html);
         scroll()
