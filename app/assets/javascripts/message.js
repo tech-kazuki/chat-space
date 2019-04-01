@@ -65,7 +65,6 @@ $(document).on('turbolinks:load', function() {
       dataType: 'json'
     })
     .always(function(data){
-      console.log(data);
       data.forEach(function(data){
         var html = buildHTML(data);
         $('.messages').append(html);
