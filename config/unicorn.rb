@@ -11,9 +11,6 @@ stdout_path "#{app_path}/log/unicorn.stdout.log"
 listen 3000
 timeout 60
 
-stderr_path File.expand_path('../../log/unicorn_stderr.log', __FILE__)
-stdout_path File.expand_path('../../log/unicorn_stdout.log', __FILE__)
-
 preload_app true
 GC.respond_to?(:copy_on_write_friendly=) && GC.copy_on_write_friendly = true
 
