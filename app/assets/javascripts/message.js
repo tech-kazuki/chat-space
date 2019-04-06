@@ -53,7 +53,7 @@ $(document).on('turbolinks:load', function() {
   });
 
   $(function() {
-    setInterval(update, 3000);
+    setInterval(update, 300000000);
   });
 
   function update() {
