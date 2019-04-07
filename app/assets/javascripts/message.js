@@ -53,10 +53,10 @@ $(document).on('turbolinks:load', function() {
   });
 
   $(function() {
-    setInterval(update, 300000000);
+    setInterval(reloadMessages, 5000);
   });
 
-  function update() {
+  function reloadMessages() {
       var message_id = $('.message:last').data('id') || 0;
     $.ajax({
       url: location.href,
@@ -66,8 +66,8 @@ $(document).on('turbolinks:load', function() {
     })
     .always(function(data){
       data.forEach(function(data){
-        var html = buildHTML(data);
-        $('.messages').append(html);
+        var insertHTML = buildHTML(data);
+        $('.messages').append(insertHTML);
         scroll()
       });
     });
