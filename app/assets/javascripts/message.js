@@ -66,8 +66,8 @@ $(document).on('turbolinks:load', function() {
     })
     .always(function(data){
       data.forEach(function(data){
-        var insertHTML = buildHTML(data);
-        $('.messages').append(insertHTML);
+        var insertHtml = buildHTML(data);
+        $('.messages').append(insertHtml);
         scroll()
       });
     });
